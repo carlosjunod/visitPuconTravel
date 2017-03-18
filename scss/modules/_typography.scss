@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Open+Sans:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+$fontface: 'Bitter', serif;
+$sitefont: 'Open Sans', sans-serif;
+$boldfont: 'Oswald', sans-serif;
+
+// Font-size Set up
+$font-base-line: 62.5%; //baseline on html
+$size: 1.6rem;
+$lineh: 1.45;
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $fontface;
+    font-weight: 700;
+}
