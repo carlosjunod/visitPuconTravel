@@ -97,7 +97,7 @@ function initMap() {
 
 $(document).ready(function () {
 
-    // $('#modal').hide()
+    $('#modal').hide();
     $('#modal .close').click(function () {
         $(this).closest('#modal').fadeOut();
     });
