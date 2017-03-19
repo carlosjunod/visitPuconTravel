@@ -4489,6 +4489,9 @@ header#single {
   #content .col-info-pan a {
     color: #97C643;
     text-decoration: underline; }
+  #content .col-info-pan button a {
+    color: #2D2D2D;
+    text-decoration: none; }
   #content .col-info-pan button:hover {
     background-color: #97C643;
     color: #2D2D2D; }
@@ -4496,6 +4499,12 @@ header#single {
     padding: 0px; }
   #content #panel1, #content #panel2 {
     color: white; }
+
+.more-properties {
+  padding: 10%;
+  text-align: center; }
+  .more-properties i {
+    font-size: 5em; }
 
 #ourLocation {
   height: 400px; }

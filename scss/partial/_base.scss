@@ -240,6 +240,11 @@ header#single{
         button{
             @extend %btn-large-yellow;
 
+            a{
+                color: $dark;
+                text-decoration: none;
+            }
+
             &:hover{
                 background-color: $secondary;
                 color: $dark;
@@ -258,6 +263,14 @@ header#single{
     }
 
 
+}
+
+.more-properties{
+    padding: 10%;
+    text-align: center;
+    i{
+        font-size: 5em;
+    }
 }
 
 #ourLocation{
