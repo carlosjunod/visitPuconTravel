@@ -1,7 +1,5 @@
 "use strict";
 
-// var elem = new Foundation.OffCanvas(element, options);
-// $('#offCanvas').foundation('reveal', isRevealed);
 function initMap() {
     // Create a map object and specify the DOM element for display.
     var styles = [{
