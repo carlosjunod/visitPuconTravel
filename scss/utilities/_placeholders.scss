@@ -9,4 +9,19 @@
     font-size: 1.5em;
     font-family: $boldfont;
     text-transform: uppercase;
+    &:focus{
+        border-radius: 20px;
+        outline: 1px solid white;
+    }
+}
+
+%gradient_bg{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34657f+0,409596+100 */
+    background: rgb(52,101,127); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(52,101,127,1) 0%, rgba(64,149,150,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(52,101,127,1) 0%,rgba(64,149,150,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(52,101,127,1) 0%,rgba(64,149,150,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34657f', endColorstr='#409596',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
 }

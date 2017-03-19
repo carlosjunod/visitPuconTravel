@@ -1,5 +1,6 @@
 body{
     font-family: $sitefont;
+    background-color: $light
 }
 
 header#main{
@@ -19,7 +20,7 @@ header#main{
 
 
 header#secondary{
-    height: 30vh;
+    min-height: 30vh;
     background-image: url('../images/header_bg.png');
     background-size: cover;
     background-position: center;
@@ -35,19 +36,89 @@ header#secondary{
         color: $light;
         text-shadow: 0px 0px 10px rgba(black, .5);
         padding-top: 70px;
+        width: 100%;
+        text-align: center;
+
+        @media screen and (max-width: 63.9375em) {
+            padding-top: 0px;
+            width: 80%;
+            margin: 50px auto;
+            font-size: 2em;
+            text-align: center;
+        }
     }
 }
 
+header#single{
+    @extend %gradient_bg;
+    padding: 20px 0px;
+    color: $light;
+
+     h3{
+         font-family: $boldfont;
+         text-transform: uppercase;
+         display: inline-block;
+         padding: 15px 0px;
+         margin: 0px;
+
+         .title{
+             color: $yellow;
+         }
+     }
+
+     button{
+         @extend %btn-large-yellow;
+     }
+}
+
+/// MENU
+
+.icon-menu{
+    padding: 20px;
+    font-size: 2em;
+    color: $light;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgba(black, .4);
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        opacity: .5;
+    }
+
+}
+
+#menu{
+    list-style: none;
+    padding-left: 40px;
+
+    li{
+        color: $light;
+        margin-bottom: 50px;
+        a{
+            font-family: $boldfont;
+            text-transform: uppercase;
+            color: $light;
+            font-size: 3em;
+            line-height: .6em;
+        }
+
+        span{
+            display: block;
+            line-height: .5em;
+        }
+    }
+
+
+}
+///// /MENU
 
 /////////////////// OFF CANVAS MENU
 
 .off-canvas{
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34657f+0,409596+100 */
-background: rgb(52,101,127); /* Old browsers */
-background: -moz-linear-gradient(-45deg, rgba(52,101,127,1) 0%, rgba(64,149,150,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, rgba(52,101,127,1) 0%,rgba(64,149,150,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, rgba(52,101,127,1) 0%,rgba(64,149,150,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34657f', endColorstr='#409596',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    @extend %gradient_bg;
 }
 
 .js-off-canvas-overlay{
@@ -60,6 +131,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34657f', end
 }
 
 .position-right{
+    @media screen and (max-width: 63.9375em){
+        width: 60vw!important;
+        transform: translateX(60vw);
+    }
     width: 33vw;
     height: 100%;
     transform: translateX(33vw);
@@ -85,8 +160,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34657f', end
 .inner-row{
     @extend %row-spacing;
 }
+.col-info-pan{
+    @include padd-top(80px);
+}
+.single-info{
+    @include padd-top(40px);
+}
 
-main#content{
+
+#content{
     background-color: $dark;
 
     .tabs, .tabs-content{
@@ -120,6 +202,7 @@ main#content{
                     border-color: $yellow transparent transparent transparent;
                     bottom: -10px;
                     left: 10px;
+                    z-index: 10;
                 }
             }
         }
@@ -136,13 +219,13 @@ main#content{
     // ----------- tabs
 
     .col-info-pan{
-        padding-top: 80px;
         header{
             h3{
                 font-size: 2.5em;
                 letter-spacing: -0.05em;
                 display: inline-block;
                 color: $yellow;
+                line-height: 1em;
             }
             span{
                 display: inline-block;
@@ -185,13 +268,14 @@ main#content{
     list-style: none;
     padding: 0px;
     list-style-position: inside;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-family: $boldfont;
     line-height: 1.3em;
     text-align: right;
+    color: $primary;
 
     li{
-        color: $primary;
+
         margin: 0px;
         text-transform: uppercase;
 
@@ -209,7 +293,7 @@ main#content{
         }
 
         h5{
-            font-size: 5rem;
+            font-size: 3em;
             font-family: $boldfont;
             text-transform: uppercase;
             letter-spacing: -0.05em;
@@ -218,11 +302,22 @@ main#content{
 
         address{
             font-family: $sitefont;
-            font-size: 1rem;
+            font-size: 1em;
             color: $grey-dark;
             line-height: 1em;
             text-transform: capitalize;
         }
+    }
+}
+
+#contact-me.inner-contact{
+    margin-top: 0px;
+    font-size: 1rem;
+    color: $light;
+
+    a{
+        color: $light;
+        text-decoration: none;
     }
 }
 
@@ -258,6 +353,13 @@ main#content{
     }
 }
 
+.questions h5{
+    color: $yellow;
+    font-family: $boldfont;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
 .form-appto{
     background-color: $light;
     padding: 30px;
@@ -265,6 +367,10 @@ main#content{
     border-top: 15px solid $yellow;
     top:-50px;
     box-shadow: 0px 0px 50px rgba(black, .4);
+
+      @media screen and (max-width: 63.9375em) {
+        top:0px;
+      }
 
     fieldset{
 
@@ -315,6 +421,19 @@ main#content{
     }
 }
 
+//// Our properties
+.single-questions{
+    border-top: 1px solid $light;
+    @include padd-top(40px);
+}
+
+#description-single{
+    h4{
+        color: $secondary;
+        font-family: $boldfont;
+        text-transform: uppercase;
+    }
+}
 footer{
     background-color: darken($primary, 20);
     color: $light;
@@ -322,5 +441,126 @@ footer{
 
     p{
         margin: 0px;
+    }
+}
+
+// about page
+
+#single{
+    @media screen and (max-width: 63.9375em) {
+        text-align: center;
+        .text-right{
+            text-align: center;
+        }
+
+        h3{
+            font-size: 2em;
+        }
+    }
+
+
+}
+
+
+#pucon{
+    @media screen and (min-width: 64em) {
+        background-image:url('../images/southChile.jpg');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 55%;
+        position: relative;
+    }
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    .container-txt{
+        height: 100%;
+
+        h3{
+            color: $primary;
+        }
+        p{
+            color: $grey-dark;
+        }
+
+        h3, p{
+            position: relative;
+            z-index: 2;
+        }
+
+        @media screen and (min-width: 64em) {
+            &:after{
+                content: "";
+                background-color: $light;
+                height: 100%;
+                position: absolute;
+                width: 300px;
+                top:0px;
+                right: 45%;
+                z-index: 1;
+                transform: skewX(20deg);
+            }
+        }
+    }
+}
+
+#chile{
+    color: $light;
+    @extend %gradient_bg;
+    margin: 0px;
+    padding: 0px;
+    header{
+        padding: 30px;
+
+    }
+    iframe{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+// ++++++++++++++++++++++  modal
+#modal{
+    @extend %gradient_bg;
+    color: white;
+    text-align: center;
+    padding: 200px 0px;
+    position: fixed;
+    font-size: 6rem;
+    width: 50vw;
+    top: 10%;
+    left: 25%;
+    box-shadow: 0px 0px 100px rgba(black, .5);
+    z-index: 20;
+
+    @media screen and (max-width: 63.9375em) {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .text{
+        font-size: 3rem;
+        font-family: $boldfont;
+    }
+
+    .close{
+        position: absolute;
+        top: 0px;
+        font-size: 2rem;
+        right: 0px;
+        background: rgba(black, .2);
+        width: 60px;
+        padding: 5px 0px;
+        text-align: center;
+        cursor: pointer;
     }
 }

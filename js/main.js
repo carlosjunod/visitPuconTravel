@@ -96,3 +96,39 @@ function initMap() {
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
 }
+
+$(document).ready(function () {
+
+    // $('#modal').hide()
+    $('#modal .close').click(function () {
+        $(this).closest('#modal').fadeOut();
+    });
+
+    $('#submit-contact').on('click', function (e) {
+        e.preventDefault();
+        var content = {
+            name: $('#input-name').val(),
+            email: $('#input-email').val(),
+            phone: $('#input-phone').val(),
+
+            checkin: $('#input-checkin').val(),
+            checkout: $('#input-checkout').val(),
+            property: ''
+        };
+
+        console.log(content);
+
+        $.ajax({
+            type: 'POST',
+            url: '../sendEmail.php',
+            data: content,
+            success: function success() {
+                $('#modal').show().delay(2000).fadeOut();
+            }
+        }).done(function () {
+            $('#modal').show().delay(2000).fadeOut();
+        }).fail(function () {
+            $('#modal').show().delay(2000).fadeOut();
+        });
+    });
+});

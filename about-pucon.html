@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>VisitPucon.travel | About Pucon</title>
     <script src="/node_modules/foundation-sites/vendor/modernizr/modernizr.js"></script>
     <link rel="stylesheet" href="css/main.css">
 
@@ -14,15 +14,25 @@
         <div class="off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
-                <div claoffCanvasRight" datass="off-canvas position-right" id="offCanvasRight" data-off-canvas data-transition="overlap">
+                <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-transition="overlap">
+                    <!-- <button type="button" class="button" data-toggle="offCanvasRight">Open Menu</button> -->
+                    <button type="button" data-toggle="offCanvasRight" class="icon-menu">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
 
+                    <ul id="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/our-properties.html">Properties</a></li>
+                        <li><a href="/about-pucon.html">About Pucon</a><span>and Chile</span></li>
+                    </ul>
                 </div>
 
-                <div class="off-canvas-content" data-off-canvas-contsecondary">
-                    <ent>
+                <div class="off-canvas-content" data-off-canvas-content>
                     <header class="expanded row" id="secondary">
                         <div class="large-12 columns text-right">
-                            <button class="menu-icon is-open" type="button" data-open="offCanvasRight"></button>
+                            <button type="button" data-toggle="offCanvasRight" class="icon-menu">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
                         </div>
 
                         <div class="row">
@@ -30,113 +40,72 @@
                                 <img src="/images/logo.svg" alt="Logo Visit Pucon">
                             </div>
                             <div class="large-10 columns">
-                                <h3>book <span class="highlighted">NOW</span> fotr the best vacations on the South of Chile</h3>
+                                <h3>book <span class="highlighted">NOW</span> for the best vacations on the South of Chile</h3>
                             </div>
                         </div>
                     </header>
 
 
 
-                    <main class="expanded row" id="content">
-                         <ul class="tabs" data-tabs id="properties">
-                            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-                            <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
-                        </ul>
-                       <div class="tabs-content" data-tabs-content="properties">
+                    <main class="expanded row" id="about">
+                        <header id="single">
+                            <div class="row">
+                                <div class="small-12 large-8 columns">
+                                    <h3>Check our <span class="title">Properties</span></h3>
+                                </div>
+                                <div class="small-12 large-4 columns text-right">
+                                    <button class="button">
+                                        More information
+                                    </button>
+                                </div>
 
-                            <div class="tabs-panel is-active" id="panel1">
+                            </div>
+                        </header>
 
+                        <section id="pucon">
 
-                                <div class="columns large-12 no-padding-col">
-                                    <div class="orbit" role="region" aria-label="Images the property" data-orbit>
-                                        <ul class="orbit-container">
-                                            <!-- buttons -->
-                                            <button class="orbit-previous">
-                                                <span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;
-                                            </button>
-                                            <button class="orbit-next">
-                                                <span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;
-                                            </button>
-                                            <!-- /buttons -->
-
-                                            <li class="is-active orbit-slide">
-                                                <img class="orbit-image" src="http://placehold.it/1200x350?text=image+1" alt="">
-                                            </li>
-                                            <li class="orbit-slide">
-                                                <img class="orbit-image" src="http://placehold.it/1200x350?text=image+2" alt="">
-                                            </li>
-                                            <li class="orbit-slide">
-                                                <img class="orbit-image" src="http://placehold.it/1200x350?text=image+3" alt="">
-                                            </li>
-                                            <li class="orbit-slide">
-                                                <img class="orbit-image" src="http://placehold.it/1200x350?text=image+4" alt="">
-                                            </li>
-                                        </ul>
+                            <div class="row">
+                                <div class="large-6 small-12 columns">
+                                    <div class="container-txt">
+                                        <h3>About Pucon</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum autem, quia consectetur asperiores sint blanditiis veritatis itaque. Porro, ex tenetur, fuga id totam recusandae deserunt. Ea soluta voluptatibus, consequuntur quod.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum autem, quia consectetur asperiores sint blanditiis veritatis itaque. Porro, ex tenetur, fuga id totam recusandae deserunt. Ea soluta voluptatibus, consequuntur quod.</p>
                                     </div>
                                 </div>
-
-                                <div class="large-7 columns col-info-pan">
-                                    <div class="row">
-
-                                        <header class="small-12 column large-11 large-centered inner-row">
-                                            <h3>6 roms + 6 bathrooms</h3><span class="price">*$250 per night</span>
-                                        </header>
-                                        <div class="smal-12 large-11 large-centered inner-row">
-                                            <img src="../images/icons_main.svg" alt="">
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-
-                                <div class="large-4 end columns item-grid">
-                                    <form action="" class="form-appto">
-                                        <fieldset>
-                                            <legend>Contact Information</legend>
-                                            <p>
-                                                <label for="input-name">Name</label>
-                                                <input type="text" id="input-name" placeholder="Your Name">
-                                            </p>
-                                            <p>
-                                                <label for="input-email">Email</label>
-                                                <input type="text" id="input-email" placeholder="Your Email">
-                                            </p>
-                                            <p>
-                                                <label for="input-phone">Phone number</label>
-                                                <input type="text" id="input-phone" placeholder="Your phone number">
-                                            </p>
-                                        </fieldset>
-                                        <fieldset>
-                                            <legend>Travel Invormation</legend>
-                                            <p>
-                                                <label for="input-checkin">Check-In</label>
-                                                <input type="date" id="input-checkin" placeholder="From">
-                                            </p>
-                                            <p>
-                                                <label for="input-checkout">Check-Out</label>
-                                                <input type="date" id="input-checkout" placeholder="To">
-                                            </p>
-                                        </fieldset>
-                                        <div class="text-right price-calc">
-                                            <p>Your total is: <span>750.00</span></p>
-                                            <button type="submit" class="button large">Check availability</button>
-                                        </div>
-                                    </form>
+                                <div class="large-6 columns hide-for-large">
+                                    <img src="../images/southChile.jpg" alt="South of Chile">
                                 </div>
                             </div>
-                            <!-- /FIRST PANEL -->
 
-                            <div class="tabs-panel" id="panel2">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio quibusdam quam, tempora ex mollitia, iste impedit nemo nihil quo consequatur obcaecati neque quia voluptates dolore? Nisi excepturi eaque, veritatis.
+                        </section>
+
+                        <section id="chile">
+
+                            <div class="row">
+                                <header class="small-12 columns">
+                                    <h3>About Chile</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt explicabo, modi tempore suscipit, illo aspernatur voluptate distinctio possimus! Maiores ipsam totam illum, magni dicta quo expedita rem non, culpa temporibus!</p>
+                                </header>
                             </div>
-                        </div>
+                            <iframe width="100%" height="720" src="https://www.youtube-nocookie.com/embed/3MtdmoxZgRM?list=PLmuv0dU1xtPuHx9BS7KRUZWiUWn0i1sVO&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+                        </section>
+
                     </main>
 
                 </div>
+
+                <footer class="row expanded">
+                    <div class="row">
+                        <div class="column small-12">
+                            <p>All rights reserved to Visit<strong>Pucon</strong>.travel</p>
+                        </div>
+                    </div>
+                </footer>
+
             </div>
         </div>
-            <!--- /off-canvas-content -->
+        <!--- /off-canvas-content -->
 
         <script src="/node_modules/foundation-sites/vendor/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/foundation-sites/dist/js/foundation.min.js"></script>

@@ -4314,16 +4314,31 @@ h1, h2, h3, h4, h5, h6 {
 .inner-row {
   margin-bottom: 20px; }
 
-main#content .col-info-pan button, .form-appto .price-calc button {
+header#single button, #content .col-info-pan button, .form-appto .price-calc button {
   background-color: #DF993A;
   color: #34657F;
   border-radius: 20px;
   font-size: 1.5em;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase; }
+  header#single button:focus, #content .col-info-pan button:focus, .form-appto .price-calc button:focus {
+    border-radius: 20px;
+    outline: 1px solid white; }
+
+header#single, .off-canvas, #chile, #modal {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34657f+0,409596+100 */
+  background: #34657f;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #34657f 0%, #409596 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34657f', endColorstr='#409596',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
 
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9f9f9; }
 
 header#main {
   height: 100vh;
@@ -4336,7 +4351,7 @@ header#main {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
 header#secondary {
-  height: 30vh;
+  min-height: 30vh;
   background-image: url("../images/header_bg.png");
   background-size: cover;
   background-position: center; }
@@ -4348,18 +4363,55 @@ header#secondary {
   header#secondary h3 {
     color: #f9f9f9;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 70px; }
+    padding-top: 70px;
+    width: 100%;
+    text-align: center; }
+    @media screen and (max-width: 63.9375em) {
+      header#secondary h3 {
+        padding-top: 0px;
+        width: 80%;
+        margin: 50px auto;
+        font-size: 2em;
+        text-align: center; } }
 
-.off-canvas {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#34657f+0,409596+100 */
-  background: #34657f;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #34657f 0%, #409596 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34657f', endColorstr='#409596',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
+header#single {
+  padding: 20px 0px;
+  color: #f9f9f9; }
+  header#single h3 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 0px;
+    margin: 0px; }
+    header#single h3 .title {
+      color: #DF993A; }
+
+.icon-menu {
+  padding: 20px;
+  font-size: 2em;
+  color: #f9f9f9;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); }
+  .icon-menu:focus {
+    outline: none; }
+  .icon-menu:hover {
+    opacity: .5; }
+
+#menu {
+  list-style: none;
+  padding-left: 40px; }
+  #menu li {
+    color: #f9f9f9;
+    margin-bottom: 50px; }
+    #menu li a {
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      color: #f9f9f9;
+      font-size: 3em;
+      line-height: .6em; }
+    #menu li span {
+      display: block;
+      line-height: .5em; }
 
 .js-off-canvas-overlay {
   background-color: rgba(45, 45, 45, 0.6);
@@ -4372,6 +4424,10 @@ header#secondary {
   width: 33vw;
   height: 100%;
   transform: translateX(33vw); }
+  @media screen and (max-width: 63.9375em) {
+    .position-right {
+      width: 60vw !important;
+      transform: translateX(60vw); } }
 
 .off-canvas.is-transition-overlap {
   z-index: 12; }
@@ -4385,22 +4441,28 @@ header#secondary {
 .no-padding-col {
   padding: 0px; }
 
-main#content {
+.col-info-pan {
+  padding-top: 80px; }
+
+.single-info {
+  padding-top: 40px; }
+
+#content {
   background-color: #2D2D2D; }
-  main#content .tabs, main#content .tabs-content {
+  #content .tabs, #content .tabs-content {
     background-color: #2D2D2D;
     border: none; }
-  main#content .tabs {
+  #content .tabs {
     background-color: #34657F; }
-    main#content .tabs .tabs-title a {
+    #content .tabs .tabs-title a {
       color: #f9f9f9;
       font-family: "Oswald", sans-serif;
       font-size: 1.2em; }
-    main#content .tabs .is-active, main#content .tabs .tabs-title > a[aria-selected='true'] {
+    #content .tabs .is-active, #content .tabs .tabs-title > a[aria-selected='true'] {
       background-color: #DF993A; }
-    main#content .tabs .tabs-title.is-active {
+    #content .tabs .tabs-title.is-active {
       position: relative; }
-      main#content .tabs .tabs-title.is-active:after {
+      #content .tabs .tabs-title.is-active:after {
         content: "";
         position: absolute;
         width: 0;
@@ -4409,30 +4471,30 @@ main#content {
         border-width: 25px 30px 0 30px;
         border-color: #DF993A transparent transparent transparent;
         bottom: -10px;
-        left: 10px; }
-    main#content .tabs .is-active:hover:after {
+        left: 10px;
+        z-index: 10; }
+    #content .tabs .is-active:hover:after {
       border-color: #9a6319 transparent transparent transparent; }
-    main#content .tabs .tabs-title a:hover {
+    #content .tabs .tabs-title a:hover {
       background-color: #9a6319; }
-  main#content .col-info-pan {
-    padding-top: 80px; }
-    main#content .col-info-pan header h3 {
-      font-size: 2.5em;
-      letter-spacing: -0.05em;
-      display: inline-block;
-      color: #DF993A; }
-    main#content .col-info-pan header span {
-      display: inline-block;
-      margin-left: 10px; }
-    main#content .col-info-pan a {
-      color: #97C643;
-      text-decoration: underline; }
-    main#content .col-info-pan button:hover {
-      background-color: #97C643;
-      color: #2D2D2D; }
-  main#content .tabs-panel {
+  #content .col-info-pan header h3 {
+    font-size: 2.5em;
+    letter-spacing: -0.05em;
+    display: inline-block;
+    color: #DF993A;
+    line-height: 1em; }
+  #content .col-info-pan header span {
+    display: inline-block;
+    margin-left: 10px; }
+  #content .col-info-pan a {
+    color: #97C643;
+    text-decoration: underline; }
+  #content .col-info-pan button:hover {
+    background-color: #97C643;
+    color: #2D2D2D; }
+  #content .tabs-panel {
     padding: 0px; }
-  main#content #panel1, main#content #panel2 {
+  #content #panel1, #content #panel2 {
     color: white; }
 
 #ourLocation {
@@ -4443,12 +4505,12 @@ main#content {
   list-style: none;
   padding: 0px;
   list-style-position: inside;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: "Oswald", sans-serif;
   line-height: 1.3em;
-  text-align: right; }
+  text-align: right;
+  color: #34657F; }
   #contact-me li {
-    color: #34657F;
     margin: 0px;
     text-transform: uppercase; }
     #contact-me li a {
@@ -4461,17 +4523,25 @@ main#content {
         text-transform: lowercase;
         line-height: 1em; }
     #contact-me li h5 {
-      font-size: 5rem;
+      font-size: 3em;
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
       letter-spacing: -0.05em;
       line-height: .9em; }
     #contact-me li address {
       font-family: "Open Sans", sans-serif;
-      font-size: 1rem;
+      font-size: 1em;
       color: #2f2f2f;
       line-height: 1em;
       text-transform: capitalize; }
+
+#contact-me.inner-contact {
+  margin-top: 0px;
+  font-size: 1rem;
+  color: #f9f9f9; }
+  #contact-me.inner-contact a {
+    color: #f9f9f9;
+    text-decoration: none; }
 
 #do-in-pucon {
   background-color: #34657F;
@@ -4494,6 +4564,12 @@ main#content {
       font-family: "Oswald", sans-serif;
       top: 0; }
 
+.questions h5 {
+  color: #DF993A;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em; }
+
 .form-appto {
   background-color: #f9f9f9;
   padding: 30px;
@@ -4501,6 +4577,9 @@ main#content {
   border-top: 15px solid #DF993A;
   top: -50px;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4); }
+  @media screen and (max-width: 63.9375em) {
+    .form-appto {
+      top: 0px; } }
   .form-appto fieldset {
     text-transform: uppercase;
     color: #34657F;
@@ -4530,12 +4609,106 @@ main#content {
       .form-appto .price-calc p span:before {
         content: '$'; }
 
+.single-questions {
+  border-top: 1px solid #f9f9f9;
+  padding-top: 40px; }
+
+#description-single h4 {
+  color: #97C643;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase; }
+
 footer {
   background-color: #162b37;
   color: #f9f9f9;
   padding: 20px 0px; }
   footer p {
     margin: 0px; }
+
+@media screen and (max-width: 63.9375em) {
+  #single {
+    text-align: center; }
+    #single .text-right {
+      text-align: center; }
+    #single h3 {
+      font-size: 2em; } }
+
+#pucon {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media screen and (min-width: 64em) {
+    #pucon {
+      background-image: url("../images/southChile.jpg");
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 55%;
+      position: relative; } }
+  @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    #pucon {
+      padding-top: 20px;
+      padding-bottom: 20px; } }
+  #pucon .container-txt {
+    height: 100%; }
+    #pucon .container-txt h3 {
+      color: #34657F; }
+    #pucon .container-txt p {
+      color: #2f2f2f; }
+    #pucon .container-txt h3, #pucon .container-txt p {
+      position: relative;
+      z-index: 2; }
+    @media screen and (min-width: 64em) {
+      #pucon .container-txt:after {
+        content: "";
+        background-color: #f9f9f9;
+        height: 100%;
+        position: absolute;
+        width: 300px;
+        top: 0px;
+        right: 45%;
+        z-index: 1;
+        transform: skewX(20deg); } }
+
+#chile {
+  color: #f9f9f9;
+  margin: 0px;
+  padding: 0px; }
+  #chile header {
+    padding: 30px; }
+  #chile iframe {
+    width: 100%;
+    margin: 0px;
+    padding: 0px; }
+
+#modal {
+  color: white;
+  text-align: center;
+  padding: 200px 0px;
+  position: fixed;
+  font-size: 6rem;
+  width: 50vw;
+  top: 10%;
+  left: 25%;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+  z-index: 20; }
+  @media screen and (max-width: 63.9375em) {
+    #modal {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh; } }
+  #modal .text {
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif; }
+  #modal .close {
+    position: absolute;
+    top: 0px;
+    font-size: 2rem;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 60px;
+    padding: 5px 0px;
+    text-align: center;
+    cursor: pointer; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
